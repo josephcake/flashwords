@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Route,Switch,} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './page/Home.js'
+import CardContainer from './container/CardContainer.js'
+import Navigation from './navigation/Navigation.js'
+import MyWords from './page/MyWords.js'
+
+class App extends React.Component{
+    state={
+      myWords:[],
+    }  
+    addToWords=(e)=>{
+      this.setState({
+        myWords: [...this.state.myWords, e]
+      })
+    }
+    render(){
+        return (            
+            <div className="App">
+                <Navigation/>    
+                <Switch>                    
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/cards" render={() => <CardContainer addToWords={this.addToWords}/>}/>
+                    <Route exact path="/mywords" render={() => <MyWords myWords={this.state.myWords}/>} />
+                </Switch>
+            </div>            
+        );
+    }
 }
 
 export default App;

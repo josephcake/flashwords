@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+.card{  
+  height:300px;
+  /* line-height: 6px; */  
+  word-wrap: break-word;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover .add-to-word{  
+  visibility: visible;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flip-card{
+  height: 100%;
+  /* display: inline-block; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.flip-card-inner{
+  /* height: 100%; */
+  line-height: 280px;
+  /* display: inline-flex; */
+  margin: 0 auto;
 }
-
-.App-link {
-  color: #61dafb;
+.flip-card-front{
+  color:darkslateblue;
+  font-size: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flip-card-back{  
+  color:tomato;
+  font-size: 16px;
+  line-height: 2;
+  display: inline-block;
+}
+.add-to-word{
+  visibility: hidden;
+  z-index: 99999999;
+  outline: none;
+  /* font-size: 3.5rem; */
+  
+}
+.add-to-word span{
+  color:#369c87;
+  font-size: 3.5rem;
+}
+.nav-item{
+  padding:0 2rem;
 }
