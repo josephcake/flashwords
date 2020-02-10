@@ -5,6 +5,7 @@ import {Route,Switch,} from 'react-router-dom';
 
 import Home from './page/Home.js'
 import CardContainer from './container/CardContainer.js'
+import ListContainer from './container/ListContainer.js'
 import Navigation from './navigation/Navigation.js'
 import MyWords from './page/MyWords.js'
 import {gre} from './gre.js'
@@ -45,6 +46,7 @@ class App extends React.Component{
                 <Switch>                    
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/cards" render={() => <CardContainer addToWords={this.addToWords} currentCard={card}/>}/>
+                    <Route exact path="/lists" render={() => <ListContainer addToWords={this.addToWords} currentCard={card}/>}/>
                     <Route exact path="/mywords" render={() => <MyWords myWords={this.state.myWords} removeFromWords={this.removeFromWords}/>} />
                 </Switch>
             </div>            

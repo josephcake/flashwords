@@ -20,13 +20,15 @@ class Navigation extends Component {
     setCard=(e)=>{                
         this.props.setCard(e)        
         this.setState({
-            card: e
+            card: e,
+            list:"List"
         })               
     }
     setList=(e)=>{                
         
         this.setState({
-            list: e
+            list: e,
+            card:"Card"
         })       
     }
 
@@ -50,11 +52,11 @@ class Navigation extends Component {
                                         {this.state.list}
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <Link to="cards" onClick={()=>this.setList("sat")} className="nav-link">SAT</Link>
-                                        <Link to="cards" onClick={()=>this.setList("gre")} className="nav-link">GRE</Link>                                        
-                                        <Link to="cards" onClick={()=>this.setList("biology")} className="nav-link">Biology</Link>
-                                        <Link to="cards" onClick={()=>this.setList("chemistry")} className="nav-link">Chemistry</Link>
-                                        <Link to="cards" onClick={()=>this.setList("physic")} className="nav-link">Physic</Link>
+                                        <Link to="lists" onClick={()=>this.setList("sat")} className="nav-link">SAT</Link>
+                                        <Link to="lists" onClick={()=>this.setList("gre")} className="nav-link">GRE</Link>                                        
+                                        <Link to="lists" onClick={()=>this.setList("biology")} className="nav-link">Biology</Link>
+                                        <Link to="lists" onClick={()=>this.setList("chemistry")} className="nav-link">Chemistry</Link>
+                                        <Link to="lists" onClick={()=>this.setList("physic")} className="nav-link">Physic</Link>
                                     </div>
                                 </div>                                
                             </li>
