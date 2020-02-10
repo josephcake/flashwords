@@ -1,4 +1,4 @@
-[
+const gre = [
   {"word":"Aberration","definition":"straying away from what is normal"},
   {"word":"Abet","definition":"help/encourage somebody (in doing wrong)"},
   {"word":"Abeyance","definition":"suspended action"},
@@ -1310,3 +1310,5 @@
   {"word":"Yarn","definition":"tale story fibers for knitting"},
   {"word":"Yeoman","definition":"man owning small estate; middle-class farmer"}
 ]
+
+export {gre}
