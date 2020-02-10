@@ -17,6 +17,18 @@ class App extends React.Component{
         myWords: [...this.state.myWords, e]
       })
     }
+    removeFromWords=(e)=>{
+      let idx = this.state.myWords.indexOf(e)
+      let copy = this.state.myWords
+      copy.splice(idx, 1)
+      this.setState({
+        myWords: copy
+      })
+    }
+    componentDidMount(){
+      // console.log()
+      window.scrollTo(0,0)
+    }
     render(){
         return (            
             <div className="App">
@@ -24,7 +36,7 @@ class App extends React.Component{
                 <Switch>                    
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/cards" render={() => <CardContainer addToWords={this.addToWords}/>}/>
-                    <Route exact path="/mywords" render={() => <MyWords myWords={this.state.myWords}/>} />
+                    <Route exact path="/mywords" render={() => <MyWords myWords={this.state.myWords} removeFromWords={this.removeFromWords}/>} />
                 </Switch>
             </div>            
         );

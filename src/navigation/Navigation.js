@@ -12,7 +12,7 @@ class Navigation extends Component {
         console.log(HOME)
         return(
             <>
-                <nav className={"navbar navbar-expand-sm navbar-dark bg-dark sticky-top"}>
+                <nav className={"navbar navbar-expand-md navbar-light bg-light sticky-top"}>
                     <a href="#" className={"navbar-brand"}>FlashWords</a>
                     <button className={"navbar-toggler"} data-toggle={"collapse"} data-target={"#navbar-menu"}>
                         <span className={"navbar-toggler-icon"}></span>

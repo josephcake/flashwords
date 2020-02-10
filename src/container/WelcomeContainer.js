@@ -4,9 +4,9 @@ class WelcomeContainer extends Component {
     render(){
         return (
             <div className={"container-fluid padding"}>
-                <div className={"row welcome text-center"}>
+                <div className={"row welcome text-center"} style={{margin:"auto"}}>
                     <div className={"col-12"}>
-                        <h1 className={"display-4"}>Built with Bootstrap</h1>
+                        <h1 className={"display-4"}>Built with laziness</h1>
                     </div>
                     <hr/>
                     <div className={"col-12"}>

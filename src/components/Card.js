@@ -13,26 +13,37 @@ class Card extends React.Component{
                 flipped:!this.state.flipped
             })
         }        
-    }
-    addToWords=(e)=>{        
-        this.props.addToWords(e)
+    }    
+    handleAddRemove=(word, added)=>{
+        if(added){
+            this.props.removeFromWords(word)
+        }else{
+            this.props.addToWords(word)
+        }
+
     }
 
     render(){
-        const {item} = this.props
+        const {item, added, dummy} = this.props
         return (            
-            <div className={"card col border-0 my-2 bg-white text-center col-12 col-sm-12 col-md-6 col-lg-4 mx-auto offset-lg-3"}>                
-                <div className={"flip-card bg-light align-items-center shadow rounded"}>                    
-                    <button onClick={()=>this.addToWords(item)} type="button" data-card={"add"} className="close ml add-to-word" aria-label="Close">
-                        {
-                            this.props.added
-                            ?
-                            <span aria-hidden="true">x</span>
-                            :
-                            <span aria-hidden="true">+</span>
-                        }
-
-                    </button>
+            <div className={"word-card col border-0 my-2  text-center col-12 col-sm-12 col-md-6 col-lg-4 mx-auto offset-lg-3"}>                
+                <div className={"flip-card bg-light align-items-center shadow rounded"}>
+                    {
+                        dummy
+                        ?
+                        null
+                        :
+                        <button onClick={()=>this.handleAddRemove(item,added)} type="button" data-card={"add"} className="close ml add-to-word" aria-label="Close">
+                            {
+                                added
+                                ?
+                                <span aria-hidden="true" style={{color:"tomato"}}>x</span>
+                                :
+                                <span aria-hidden="true">+</span>
+                            }
+                        </button>
+                    }
+                    
                     <div className="flip-card-inner" data-card={"card"} onClick={this.flip}>
                         {
                             this.state.flipped                    
