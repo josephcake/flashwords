@@ -12,7 +12,7 @@ class Test extends Component {
                 {"word":"word4", "definition":"definition4"}
             ]
         return(
-            <div id={"test-page"} className={"d-flex flex-row"} style={{border:"solid 2px black"}}>
+            <div id={"test-page"} className={"d-flex flex-row"}>
                 <TestPathContainer/>
                 <TestContainer myWords={myWords}/>
             </div>

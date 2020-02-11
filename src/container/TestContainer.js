@@ -34,8 +34,8 @@ class TestContainer extends Component{
         const {myWords} = this.props
         console.log(this.state)
         return(
-            <div className={"container-fluid test-container"}>
-                <div className={"row"}>                    
+            <div className={"container-fluid test-container"} style={{height:"100%"}}>
+                <div className={"row"}>
                         {
                             myWords.length?
                             <>
