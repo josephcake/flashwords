@@ -16,6 +16,7 @@ import {
   Biochemistry
   } from './constant/PageConstant.js'
 import Home from './page/Home.js'
+import Test from './page/Test.js'
 import CardContainer from './container/CardContainer.js'
 import ListContainer from './container/ListContainer.js'
 import Navigation from './navigation/Navigation.js'
@@ -38,6 +39,8 @@ class App extends React.Component{
       currentCard:null,      
     }  
     addToWords=(e)=>{
+      let dup = this.state.myWords.find(word=> word === e)
+      if(dup) return
       this.setState({
         myWords: [...this.state.myWords, e]
       })
@@ -78,6 +81,7 @@ class App extends React.Component{
                     <Route exact path="/cards" render={() => <CardContainer addToWords={this.addToWords} currentCard={card}/>}/>
                     <Route exact path="/lists" render={() => <ListContainer addToWords={this.addToWords} currentCard={card}/>}/>
                     <Route exact path="/mywords" render={() => <MyWords myWords={this.state.myWords} removeFromWords={this.removeFromWords}/>} />
+                    <Route exact path="/test" render={() => <Test myWords={this.state.myWords}/>} />
                 </Switch>
             </div>            
         );

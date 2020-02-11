@@ -114,7 +114,7 @@ class Navigation extends Component {
                                     </div>
                                 </div>                                                                                            
                             </li>
-                            <li className={"nav-item"}> <Link to="/" className="nav-link">TEST</Link></li>
+                            <li className={"nav-item"}> <Link to="test" className="nav-link">TEST</Link></li>
                         </ul>
                     </div>
                     
