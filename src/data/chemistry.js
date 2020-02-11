@@ -1,215 +1,591 @@
 const chemistry = [
-    {"word":"absolute temperature","definition":"temperature measured on the absolute scale"},
-    {"word":"absolute zero","definition":"the lowest temperature theoretically attainable"},
-    {"word":"absorption","definition":"a process in which one substance permeates another"},
-    {"word":"accuracy","definition":"the quality of being near to the true value"},
-    {"word":"acid","definition":"any of various water-soluble compounds having a sour taste"},
-    {"word":"activation energy","definition":"the energy that an atomic system must acquire before a process (such as an emission or reaction) can occur"},
-    {"word":"addition reaction","definition":"a chemical reaction in which one molecule is added to another"},
-    {"word":"alcohol","definition":"a volatile compound made by distillation"},
-    {"word":"alkali metal","definition":"any of the monovalent metals of group I of the periodic table (lithium or sodium or potassium or rubidium or cesium or francium)"},
-    {"word":"alkaline","definition":"relating to or containing an alkali"},
-    {"word":"alkaline-earth metal","definition":"any of the bivalent metals of group II of the periodic table"},
-    {"word":"allotrope","definition":"a structurally different form of an element"},
-    {"word":"alloy","definition":"a mixture containing two or more metallic elements"},
-    {"word":"amorphous","definition":"without real or apparent crystalline form"},
-    {"word":"anhydrous","definition":"without water; especially without water of crystallization"},
-    {"word":"anion","definition":"a particle with a negative electric charge"},
-    {"word":"aqueous solution","definition":"a solution in water"},
-    {"word":"atom","definition":"the smallest component of an element"},
-    {"word":"atomic mass","definition":"the property of an atom that causes it to have weight"},
-    {"word":"atomic number","definition":"quantity of protons in the nucleus of an atom of an element"},
-    {"word":"atomic theory","definition":"a theory of the structure of the atom"},
-    {"word":"atomic weight","definition":"(chemistry) the mass of an atom of a chemical element expressed in atomic mass units"},
-    {"word":"Avogadro's law","definition":"the principle that equal volumes of all gases (given the same temperature and pressure) contain equal numbers of molecules"},
-    {"word":"Avogadro's number","definition":"the number of molecules in a mole of a substance"},
-    {"word":"balance","definition":"bring into equilibrium"},
-    {"word":"base","definition":"a compound reacting with an acid to form a salt and water"},
-    {"word":"beaker","definition":"a flatbottomed jar made of glass or plastic"},
-    {"word":"binary compound","definition":"chemical compound composed of only two elements"},
-    {"word":"boil","definition":"bring to the temperature at which a liquid changes to vapor"},
-    {"word":"boiling point","definition":"the temperature at which a liquid boils at sea level"},
-    {"word":"Boyle's law","definition":"the pressure of an ideal gas at constant temperature varies inversely with the volume"},
-    {"word":"brittle","definition":"having little elasticity"},
-    {"word":"buffer","definition":"(chemistry) an ionic compound that resists changes in its pH"},
-    {"word":"bunsen burner","definition":"a gas burner used in laboratories"},
-    {"word":"buoyancy","definition":"the tendency to float in water or other liquid"},
-    {"word":"calorimetry","definition":"measurement of quantities of heat"},
-    {"word":"catalyst","definition":"substance that initiates or accelerates a chemical reaction"},
-    {"word":"cation","definition":"a particle with a positive electric charge"},
-    {"word":"chain reaction","definition":"a series of chemical reactions in which the product of one is a reactant in the next"},
-    {"word":"charge","definition":"the quantity of unbalanced electricity in a body"},
-    {"word":"Charles's law","definition":"(physics) the density of an ideal gas at constant pressure varies inversely with the temperature"},
-    {"word":"chemical bond","definition":"an electrical force linking atoms"},
-    {"word":"chemical change","definition":"process determined by substances' composition and structure"},
-    {"word":"chemical energy","definition":"that part of the energy in a substance that can be released by a chemical reaction"},
-    {"word":"chemical formula","definition":"a representation of a substance using symbols for its constituent elements"},
-    {"word":"chemical property","definition":"a property used to characterize materials in reactions that change their identity"},
-    {"word":"chemical reaction","definition":"a process in which substances are changed into others"},
-    {"word":"chemistry","definition":"the science of matter"},
-    {"word":"chromatography","definition":"a process used for separating mixtures by virtue of differences in absorbency"},
-    {"word":"coefficient","definition":"a constant number that serves as a measure of some property"},
-    {"word":"cohesion","definition":"the force that holds together molecules in a solid or liquid"},
-    {"word":"colloid","definition":"a mixture with properties between those of a solution and fine suspension"},
-    {"word":"combustion","definition":"a reaction of a substance with oxygen to give heat and light"},
-    {"word":"composition","definition":"the way in which someone or something is put together"},
-    {"word":"compound","definition":"a substance formed by chemical union of two or more elements"},
-    {"word":"concentration","definition":"the strength of a solution"},
-    {"word":"condensation","definition":"process of changing from a gas to a liquid or solid state"},
-    {"word":"conductivity","definition":"the property of transmitting heat, electricity, or sound"},
-    {"word":"conductor","definition":"a substance that readily serves as a medium for transmission"},
-    {"word":"covalent bond","definition":"a chemical bond that involves sharing a pair of electrons between atoms in a molecule"},
-    {"word":"crucible","definition":"a vessel used for high temperature chemical reactions"},
-    {"word":"crystal","definition":"a solid having a highly regular atomic structure"},
-    {"word":"crystalline","definition":"consisting of or containing or of the nature of crystals"},
-    {"word":"decomposition reaction","definition":"(chemistry) separation of a substance into two or more substances that may differ from each other and from the original substance"},
-    {"word":"density","definition":"the amount per unit size"},
-    {"word":"deposition","definition":"the natural process of laying something down"},
-    {"word":"desalination","definition":"the removal of salt (especially from sea water)"},
-    {"word":"diatomic","definition":"of or relating to a molecule made up of two atoms"},
-    {"word":"dilution","definition":"a solution reduced in strength or concentration"},
-    {"word":"dissolve","definition":"pass into a solution"},
-    {"word":"distillation","definition":"purifying a liquid by boiling it and condensing its vapors"},
-    {"word":"Dmitri Mendeleev","definition":"Russian chemist who developed a periodic table of the chemical elements and predicted the discovery of several new elements (1834-1907)"},
-    {"word":"double bond","definition":"a covalent bond in which two pairs of electrons are shared between two atoms"},
-    {"word":"double replacement reaction","definition":"a chemical reaction between two compounds where the positive ion of one compound is exchanged with the positive ion of another compound"},
-    {"word":"ductile","definition":"capable of being shaped or bent or drawn out"},
-    {"word":"electrolysis","definition":"(chemistry) a chemical decomposition reaction produced by passing an electric current through a solution containing ions"},
-    {"word":"electron","definition":"an elementary particle with negative charge"},
-    {"word":"electronegativity","definition":"(chemistry) the tendency of an atom or radical to attract electrons in the formation of an ionic bond"},
-    {"word":"element","definition":"a substance that cannot be separated into simpler substances"},
-    {"word":"empirical formula","definition":"a chemical formula showing the ratio of elements in a compound rather than the total number of atoms"},
-    {"word":"endothermic","definition":"occurring or formed with absorption of heat"},
-    {"word":"endothermic reaction","definition":"a chemical reaction accompanied by the absorption of heat"},
-    {"word":"energy","definition":"any source of usable power"},
-    {"word":"entropy","definition":"energy in a system no longer available for mechanical work"},
-    {"word":"enzyme","definition":"a complex protein produced by cells that acts as a catalyst"},
-    {"word":"equilibrium","definition":"a chemical reaction and its reverse proceed at equal rates"},
-    {"word":"evaporation","definition":"the process of becoming a suspension of particles in the air"},
-    {"word":"exothermic","definition":"occurring or formed with the release of heat"},
-    {"word":"exothermic reaction","definition":"a chemical reaction accompanied by the evolution of heat"},
-    {"word":"family","definition":"a collection of things sharing a common attribute"},
-    {"word":"fermentation","definition":"breaking down an organic substance, as sugar into alcohol"},
-    {"word":"first law of thermodynamics","definition":"the fundamental principle of physics that the total energy of an isolated system is constant despite internal changes"},
-    {"word":"fission","definition":"splitting a massive nucleus with the release of energy"},
-    {"word":"flammable","definition":"easily ignited"},
-    {"word":"free energy","definition":"(physics) a thermodynamic quantity equivalent to the capacity of a physical system to do work; the units of energy are joules or ergs"},
-    {"word":"freezing","definition":"the withdrawal of heat to change something from a liquid to a solid"},
-    {"word":"freezing point","definition":"the temperature below which a liquid turns into a solid"},
-    {"word":"fusion","definition":"reaction in which nuclei combine to form more massive nuclei"},
-    {"word":"gas","definition":"state of matter distinguished from solid and liquid states"},
-    {"word":"Gay-Lussac's law","definition":"(physics) the density of an ideal gas at constant pressure varies inversely with the temperature"},
-    {"word":"group","definition":"atoms bound together as a unit forming part of a molecule"},
-    {"word":"halogen","definition":"any of five related nonmetallic elements (fluorine or chlorine or bromine or iodine or astatine) that are all monovalent and readily form negative ions"},
-    {"word":"heat","definition":"a form of energy transferred by a difference in temperature"},
-    {"word":"heterogeneous","definition":"consisting of elements not of the same kind or nature"},
-    {"word":"homogeneous","definition":"all of the same or similar kind or nature"},
-    {"word":"hydrate","definition":"any compound that contains water of crystallization"},
-    {"word":"hydrocarbon","definition":"an organic compound containing only carbon and hydrogen"},
-    {"word":"hydrogen bond","definition":"a chemical bond consisting of a hydrogen atom between two electronegative atoms (e.g., oxygen or nitrogen) with one side be a covalent bond and the other being an ionic bond"},
-    {"word":"hypertonic","definition":"having a higher osmotic pressure than a comparison solution"},
-    {"word":"hypotonic","definition":"having a lower osmotic pressure than a comparison solution"},
-    {"word":"ideal gas","definition":"a hypothetical gas with molecules of negligible size that exert no intermolecular forces"},
-    {"word":"immiscible","definition":"(chemistry, physics) incapable of mixing"},
-    {"word":"indicator","definition":"a substance that changes color to show something's presence"},
-    {"word":"inorganic compound","definition":"any compound that does not contain carbon"},
-    {"word":"ion","definition":"a particle that is electrically charged positive or negative"},
-    {"word":"ionic","definition":"containing or involving electrically charged particles"},
-    {"word":"ionic bond","definition":"a chemical bond between oppositely charged ions"},
-    {"word":"isomer","definition":"a compound that exists in forms having different arrangements of atoms but the same molecular weight"},
-    {"word":"isotonic","definition":"having the same or equal osmotic pressure"},
-    {"word":"isotope","definition":"atom with same atomic number, different number of neutrons"},
-    {"word":"Kelvin","definition":"British physicist who invented the Kelvin scale of temperature and pioneered undersea telegraphy (1824-1907)"},
-    {"word":"kinetic theory","definition":"(physics) a theory that gases consist of small particles in random motion"},
-    {"word":"lattice","definition":"an arrangement of points in a regular periodic pattern"},
-    {"word":"law of conservation of matter","definition":"a fundamental principle of classical physics that matter cannot be created or destroyed in an isolated system"},
-    {"word":"law of definite proportions","definition":"(chemistry) law stating that every pure substance always contains the same elements combined in the same proportions by weight"},
-    {"word":"Le Chatelier's principle","definition":"the principle that if any change is imposed on a system that is in equilibrium then the system tends to adjust to a new equilibrium counteracting the change"},
-    {"word":"liquid","definition":"fluid matter having no fixed shape but a fixed volume"},
-    {"word":"litmus test","definition":"material that changes color in acidic or alkaline solutions"},
-    {"word":"luster","definition":"the property of something that shines with reflected light"},
-    {"word":"malleable","definition":"capable of being shaped or bent"},
-    {"word":"mass","definition":"the property of a body that causes it to have weight"},
-    {"word":"mass number","definition":"the sum of the number of neutrons and protons in an atomic nucleus"},
-    {"word":"matter","definition":"that which has mass and occupies space"},
-    {"word":"melting point","definition":"the temperature at which a solid turns into a liquid"},
-    {"word":"meniscus","definition":"the curved upper surface of a liquid in a vertical tube"},
-    {"word":"metal","definition":"a chemical element or alloy that is usually a shiny solid"},
-    {"word":"metallic bond","definition":"a chemical bond in which electrons are shared over many nuclei and electronic conduction occurs"},
-    {"word":"metalloid","definition":"of or being a nonmetallic element that has some of the properties of metal"},
-    {"word":"miscible","definition":"capable of being mixed, in chemistry"},
-    {"word":"mixture","definition":"a substance consisting of substances blended together"},
-    {"word":"molarity","definition":"concentration measured by molecular weight of a substance"},
-    {"word":"mole","definition":"the molecular mass of a substance expressed in grams"},
-    {"word":"molecule","definition":"the simplest structural unit of an element or compound"},
-    {"word":"monatomic","definition":"of or relating to an element consisting of a single atom"},
-    {"word":"neutral","definition":"having only a limited ability to react chemically"},
-    {"word":"neutralization reaction","definition":"a chemical reaction in which an acid and a base interact with the formation of a salt; with strong acids and bases the essential reaction is the combination of hydrogen ions with hydroxyl ions to form water"},
-    {"word":"neutron","definition":"a subatomic particle with zero charge"},
-    {"word":"noble gas","definition":"any of the chemically inert gaseous elements of the helium group in the periodic table"},
-    {"word":"nonpolar","definition":"not ionic"},
-    {"word":"nucleus","definition":"the positively charged dense center of an atom"},
-    {"word":"orbit","definition":"the path of an electron around the nucleus of an atom"},
-    {"word":"orbital","definition":"relating to the path of one body around another"},
-    {"word":"organic compound","definition":"any compound of carbon and another element or a radical"},
-    {"word":"osmosis","definition":"diffusion of molecules through a semipermeable membrane"},
-    {"word":"oxidation","definition":"the process by which a substance combines with oxygen"},
-    {"word":"oxidation number","definition":"the degree of oxidation of an atom or ion or molecule"},
-    {"word":"oxidation-reduction","definition":"a reversible chemical reaction in which one reaction is an oxidation and the reverse is a reduction"},
-    {"word":"oxidize","definition":"enter into a combination with oxygen"},
-    {"word":"periodic law","definition":"(chemistry) the principle that chemical properties of the elements are periodic functions of their atomic numbers"},
-    {"word":"periodic table","definition":"arrangement of chemical elements according to atomic number"},
-    {"word":"pH","definition":"a measure of the acidity or alkalinity of a solution"},
-    {"word":"phase","definition":"a distinct state of matter in a system"},
-    {"word":"phase change","definition":"a change from one state (solid or liquid or gas) to another without a change in chemical composition"},
-    {"word":"pH scale","definition":"a measure of the acidity or alkalinity of a solution"},
-    {"word":"physical change","definition":"a change from one state (solid or liquid or gas) to another without a change in chemical composition"},
-    {"word":"physical property","definition":"any property used to characterize matter and energy and their interactions"},
-    {"word":"plasma","definition":"a fourth state of matter distinct from solid, liquid or gas"},
-    {"word":"polar","definition":"having a pair of equal and opposite charges"},
-    {"word":"polyatomic","definition":"of or relating to a molecule made up of more than two atoms"},
-    {"word":"polymer","definition":"a naturally occurring or synthetic compound"},
-    {"word":"polymerization","definition":"a chemical process that combines several monomers to form a polymer or polymeric compound"},
-    {"word":"precipitate","definition":"a substance separated from a solution or suspension"},
-    {"word":"precision","definition":"the quality of being reproducible in amount or performance"},
-    {"word":"product","definition":"a chemical substance formed as a result of a reaction"},
-    {"word":"property","definition":"a basic or essential attribute shared by members of a class"},
-    {"word":"proton","definition":"a stable particle with positive charge"},
-    {"word":"radiation","definition":"energy transmitted in the form of rays or waves or particles"},
-    {"word":"radioisotope","definition":"a radioactive isotope of an element"},
-    {"word":"reactant","definition":"a chemical substance present at the start of a process"},
-    {"word":"reaction","definition":"a process in which a substance is changed into another"},
-    {"word":"reagent","definition":"a chemical agent for use in chemical reactions"},
-    {"word":"redox","definition":"a reversible chemical reaction in which one reaction is an oxidation and the reverse is a reduction"},
-    {"word":"rusting","definition":"the formation of reddish-brown ferric oxides on iron by low-temperature oxidation in the presence of water"},
-    {"word":"salinity","definition":"the relative proportion of salt in a solution"},
-    {"word":"saponification","definition":"a chemical reaction in which an ester is heated with an alkali (especially the alkaline hydrolysis of a fat or oil to make soap)"},
-    {"word":"solid","definition":"matter with definite shape at room temperature and pressure"},
-    {"word":"solubility","definition":"the quality of being easily dissolved in liquid"},
-    {"word":"solute","definition":"the dissolved matter in a solution"},
-    {"word":"solution","definition":"a homogeneous mixture of two or more substances"},
-    {"word":"solvent","definition":"a liquid substance capable of dissolving other substances"},
-    {"word":"specific heat","definition":"the heat required to raise the temperature of one gram of a substance one degree centigrade"},
-    {"word":"state of matter","definition":"(chemistry) the three traditional states of matter are solids (fixed shape and volume) and liquids (fixed volume and shaped by the container) and gases (filling the container)"},
-    {"word":"stoichiometry","definition":"(chemistry) the relation between the quantities of substances that take part in a reaction or form a compound (typically a ratio of whole integers)"},
-    {"word":"STP","definition":"standard temperature and pressure"},
-    {"word":"subatomic particle","definition":"a body having finite mass and internal structure but negligible dimensions"},
-    {"word":"sublimation","definition":"a change directly from the solid to the gaseous state"},
-    {"word":"subscript","definition":"character printed slightly below and to the side of another"},
-    {"word":"substance","definition":"a particular kind of matter with uniform properties"},
-    {"word":"surface tension","definition":"phenomenon at a liquid's surface from intermolecular forces"},
-    {"word":"suspension","definition":"a mixture in which fine particles are supported by buoyancy"},
-    {"word":"temperature","definition":"the degree of hotness or coldness of a body or environment"},
-    {"word":"test tube","definition":"glass tube closed at one end"},
-    {"word":"thermochemistry","definition":"the branch of chemistry that studies the relation between chemical action and the amount of heat absorbed or generated"},
-    {"word":"thermodynamics","definition":"physics concerned with heat and other forms of energy"},
-    {"word":"titration","definition":"a measured amount of a solution of unknown concentration is added to a known volume of a second solution until the reaction between them is just complete; the concentration of the unknown solution (the titer) can then be calculated"},
-    {"word":"valence","definition":"the combining power of an atom or radical"},
-    {"word":"valence electron","definition":"an electron in the outer shell of an atom which can combine with other atoms to form molecules"},
-    {"word":"vaporization","definition":"the process of becoming a suspension of particles in the air"},
-    {"word":"viscosity","definition":"resistance of a liquid to flowing"},
-    {"word":"volume","definition":"the amount of 3-dimensional space occupied by an object"},
-    {"word":"weight","definition":"the vertical force exerted by a mass as a result of gravity"},
-    {"word":"yield","definition":"an amount of a product"}
-  ]
+  {
+    "word": "absorption",
+    "definition": "a process in which one substance permeates another"
+  },
+  {
+    "word": "accuracy",
+    "definition": "the quality of being near to the true value"
+  },
+  {
+    "word": "acid",
+    "definition": "any of various water-soluble compounds having a sour taste"
+  },
+  {
+    "word": "alcohol",
+    "definition": "a volatile compound made by distillation"
+  },
+  {
+    "word": "alkaline",
+    "definition": "relating to or containing an alkali"
+  },
+  {
+    "word": "allotrope",
+    "definition": "a structurally different form of an element"
+  },
+  {
+    "word": "alloy",
+    "definition": "a mixture containing two or more metallic elements"
+  },
+  {
+    "word": "amorphous",
+    "definition": "without real or apparent crystalline form"
+  },
+  {
+    "word": "anhydrous",
+    "definition": "without water; especially without water of crystallization"
+  },
+  {
+    "word": "anion",
+    "definition": "a particle with a negative electric charge"
+  },
+  {
+    "word": "atom",
+    "definition": "the smallest component of an element"
+  },
+  {
+    "word": "balance",
+    "definition": "bring into equilibrium"
+  },
+  {
+    "word": "base",
+    "definition": "a compound reacting with an acid to form a salt and water"
+  },
+  {
+    "word": "beaker",
+    "definition": "a flatbottomed jar made of glass or plastic"
+  },
+  {
+    "word": "boil",
+    "definition": "bring to the temperature at which a liquid changes to vapor"
+  },
+  {
+    "word": "brittle",
+    "definition": "having little elasticity"
+  },
+  {
+    "word": "buffer",
+    "definition": "(chemistry) an ionic compound that resists changes in its pH"
+  },
+  {
+    "word": "buoyancy",
+    "definition": "the tendency to float in water or other liquid"
+  },
+  {
+    "word": "calorimetry",
+    "definition": "measurement of quantities of heat"
+  },
+  {
+    "word": "catalyst",
+    "definition": "substance that initiates or accelerates a chemical reaction"
+  },
+  {
+    "word": "cation",
+    "definition": "a particle with a positive electric charge"
+  },
+  {
+    "word": "charge",
+    "definition": "the quantity of unbalanced electricity in a body"
+  },
+  {
+    "word": "chemistry",
+    "definition": "the science of matter"
+  },
+  {
+    "word": "chromatography",
+    "definition": "a process used for separating mixtures by virtue of differences in absorbency"
+  },
+  {
+    "word": "coefficient",
+    "definition": "a constant number that serves as a measure of some property"
+  },
+  {
+    "word": "cohesion",
+    "definition": "the force that holds together molecules in a solid or liquid"
+  },
+  {
+    "word": "colloid",
+    "definition": "a mixture with properties between those of a solution and fine suspension"
+  },
+  {
+    "word": "combustion",
+    "definition": "a reaction of a substance with oxygen to give heat and light"
+  },
+  {
+    "word": "composition",
+    "definition": "the way in which someone or something is put together"
+  },
+  {
+    "word": "compound",
+    "definition": "a substance formed by chemical union of two or more elements"
+  },
+  {
+    "word": "concentration",
+    "definition": "the strength of a solution"
+  },
+  {
+    "word": "condensation",
+    "definition": "process of changing from a gas to a liquid or solid state"
+  },
+  {
+    "word": "conductivity",
+    "definition": "the property of transmitting heat, electricity, or sound"
+  },
+  {
+    "word": "conductor",
+    "definition": "a substance that readily serves as a medium for transmission"
+  },
+  {
+    "word": "crucible",
+    "definition": "a vessel used for high temperature chemical reactions"
+  },
+  {
+    "word": "crystal",
+    "definition": "a solid having a highly regular atomic structure"
+  },
+  {
+    "word": "crystalline",
+    "definition": "consisting of or containing or of the nature of crystals"
+  },
+  {
+    "word": "density",
+    "definition": "the amount per unit size"
+  },
+  {
+    "word": "deposition",
+    "definition": "the natural process of laying something down"
+  },
+  {
+    "word": "desalination",
+    "definition": "the removal of salt (especially from sea water)"
+  },
+  {
+    "word": "diatomic",
+    "definition": "of or relating to a molecule made up of two atoms"
+  },
+  {
+    "word": "dilution",
+    "definition": "a solution reduced in strength or concentration"
+  },
+  {
+    "word": "dissolve",
+    "definition": "pass into a solution"
+  },
+  {
+    "word": "distillation",
+    "definition": "purifying a liquid by boiling it and condensing its vapors"
+  },
+  {
+    "word": "ductile",
+    "definition": "capable of being shaped or bent or drawn out"
+  },
+  {
+    "word": "electrolysis",
+    "definition": "(chemistry) a chemical decomposition reaction produced by passing an electric current through a solution containing ions"
+  },
+  {
+    "word": "electron",
+    "definition": "an elementary particle with negative charge"
+  },
+  {
+    "word": "electronegativity",
+    "definition": "(chemistry) the tendency of an atom or radical to attract electrons in the formation of an ionic bond"
+  },
+  {
+    "word": "element",
+    "definition": "a substance that cannot be separated into simpler substances"
+  },
+  {
+    "word": "endothermic",
+    "definition": "occurring or formed with absorption of heat"
+  },
+  {
+    "word": "energy",
+    "definition": "any source of usable power"
+  },
+  {
+    "word": "entropy",
+    "definition": "energy in a system no longer available for mechanical work"
+  },
+  {
+    "word": "enzyme",
+    "definition": "a complex protein produced by cells that acts as a catalyst"
+  },
+  {
+    "word": "equilibrium",
+    "definition": "a chemical reaction and its reverse proceed at equal rates"
+  },
+  {
+    "word": "evaporation",
+    "definition": "the process of becoming a suspension of particles in the air"
+  },
+  {
+    "word": "exothermic",
+    "definition": "occurring or formed with the release of heat"
+  },
+  {
+    "word": "family",
+    "definition": "a collection of things sharing a common attribute"
+  },
+  {
+    "word": "fermentation",
+    "definition": "breaking down an organic substance, as sugar into alcohol"
+  },
+  {
+    "word": "fission",
+    "definition": "splitting a massive nucleus with the release of energy"
+  },
+  {
+    "word": "flammable",
+    "definition": "easily ignited"
+  },
+  {
+    "word": "freezing",
+    "definition": "the withdrawal of heat to change something from a liquid to a solid"
+  },
+  {
+    "word": "fusion",
+    "definition": "reaction in which nuclei combine to form more massive nuclei"
+  },
+  {
+    "word": "gas",
+    "definition": "state of matter distinguished from solid and liquid states"
+  },
+  {
+    "word": "group",
+    "definition": "atoms bound together as a unit forming part of a molecule"
+  },
+  {
+    "word": "halogen",
+    "definition": "any of five related nonmetallic elements (fluorine or chlorine or bromine or iodine or astatine) that are all monovalent and readily form negative ions"
+  },
+  {
+    "word": "heat",
+    "definition": "a form of energy transferred by a difference in temperature"
+  },
+  {
+    "word": "heterogeneous",
+    "definition": "consisting of elements not of the same kind or nature"
+  },
+  {
+    "word": "homogeneous",
+    "definition": "all of the same or similar kind or nature"
+  },
+  {
+    "word": "hydrate",
+    "definition": "any compound that contains water of crystallization"
+  },
+  {
+    "word": "hydrocarbon",
+    "definition": "an organic compound containing only carbon and hydrogen"
+  },
+  {
+    "word": "hypertonic",
+    "definition": "having a higher osmotic pressure than a comparison solution"
+  },
+  {
+    "word": "hypotonic",
+    "definition": "having a lower osmotic pressure than a comparison solution"
+  },
+  {
+    "word": "immiscible",
+    "definition": "(chemistry, physics) incapable of mixing"
+  },
+  {
+    "word": "indicator",
+    "definition": "a substance that changes color to show something's presence"
+  },
+  {
+    "word": "ion",
+    "definition": "a particle that is electrically charged positive or negative"
+  },
+  {
+    "word": "ionic",
+    "definition": "containing or involving electrically charged particles"
+  },
+  {
+    "word": "isomer",
+    "definition": "a compound that exists in forms having different arrangements of atoms but the same molecular weight"
+  },
+  {
+    "word": "isotonic",
+    "definition": "having the same or equal osmotic pressure"
+  },
+  {
+    "word": "isotope",
+    "definition": "atom with same atomic number, different number of neutrons"
+  },
+  {
+    "word": "Kelvin",
+    "definition": "British physicist who invented the Kelvin scale of temperature and pioneered undersea telegraphy (1824-1907)"
+  },
+  {
+    "word": "lattice",
+    "definition": "an arrangement of points in a regular periodic pattern"
+  },
+  {
+    "word": "liquid",
+    "definition": "fluid matter having no fixed shape but a fixed volume"
+  },
+  {
+    "word": "luster",
+    "definition": "the property of something that shines with reflected light"
+  },
+  {
+    "word": "malleable",
+    "definition": "capable of being shaped or bent"
+  },
+  {
+    "word": "mass",
+    "definition": "the property of a body that causes it to have weight"
+  },
+  {
+    "word": "matter",
+    "definition": "that which has mass and occupies space"
+  },
+  {
+    "word": "meniscus",
+    "definition": "the curved upper surface of a liquid in a vertical tube"
+  },
+  {
+    "word": "metal",
+    "definition": "a chemical element or alloy that is usually a shiny solid"
+  },
+  {
+    "word": "metalloid",
+    "definition": "of or being a nonmetallic element that has some of the properties of metal"
+  },
+  {
+    "word": "miscible",
+    "definition": "capable of being mixed, in chemistry"
+  },
+  {
+    "word": "mixture",
+    "definition": "a substance consisting of substances blended together"
+  },
+  {
+    "word": "molarity",
+    "definition": "concentration measured by molecular weight of a substance"
+  },
+  {
+    "word": "mole",
+    "definition": "the molecular mass of a substance expressed in grams"
+  },
+  {
+    "word": "molecule",
+    "definition": "the simplest structural unit of an element or compound"
+  },
+  {
+    "word": "monatomic",
+    "definition": "of or relating to an element consisting of a single atom"
+  },
+  {
+    "word": "neutral",
+    "definition": "having only a limited ability to react chemically"
+  },
+  {
+    "word": "neutron",
+    "definition": "a subatomic particle with zero charge"
+  },
+  {
+    "word": "nonpolar",
+    "definition": "not ionic"
+  },
+  {
+    "word": "nucleus",
+    "definition": "the positively charged dense center of an atom"
+  },
+  {
+    "word": "orbit",
+    "definition": "the path of an electron around the nucleus of an atom"
+  },
+  {
+    "word": "orbital",
+    "definition": "relating to the path of one body around another"
+  },
+  {
+    "word": "osmosis",
+    "definition": "diffusion of molecules through a semipermeable membrane"
+  },
+  {
+    "word": "oxidation",
+    "definition": "the process by which a substance combines with oxygen"
+  },
+  {
+    "word": "oxidation-reduction",
+    "definition": "a reversible chemical reaction in which one reaction is an oxidation and the reverse is a reduction"
+  },
+  {
+    "word": "oxidize",
+    "definition": "enter into a combination with oxygen"
+  },
+  {
+    "word": "pH",
+    "definition": "a measure of the acidity or alkalinity of a solution"
+  },
+  {
+    "word": "phase",
+    "definition": "a distinct state of matter in a system"
+  },
+  {
+    "word": "plasma",
+    "definition": "a fourth state of matter distinct from solid, liquid or gas"
+  },
+  {
+    "word": "polar",
+    "definition": "having a pair of equal and opposite charges"
+  },
+  {
+    "word": "polyatomic",
+    "definition": "of or relating to a molecule made up of more than two atoms"
+  },
+  {
+    "word": "polymer",
+    "definition": "a naturally occurring or synthetic compound"
+  },
+  {
+    "word": "polymerization",
+    "definition": "a chemical process that combines several monomers to form a polymer or polymeric compound"
+  },
+  {
+    "word": "precipitate",
+    "definition": "a substance separated from a solution or suspension"
+  },
+  {
+    "word": "precision",
+    "definition": "the quality of being reproducible in amount or performance"
+  },
+  {
+    "word": "product",
+    "definition": "a chemical substance formed as a result of a reaction"
+  },
+  {
+    "word": "property",
+    "definition": "a basic or essential attribute shared by members of a class"
+  },
+  {
+    "word": "proton",
+    "definition": "a stable particle with positive charge"
+  },
+  {
+    "word": "radiation",
+    "definition": "energy transmitted in the form of rays or waves or particles"
+  },
+  {
+    "word": "radioisotope",
+    "definition": "a radioactive isotope of an element"
+  },
+  {
+    "word": "reactant",
+    "definition": "a chemical substance present at the start of a process"
+  },
+  {
+    "word": "reaction",
+    "definition": "a process in which a substance is changed into another"
+  },
+  {
+    "word": "reagent",
+    "definition": "a chemical agent for use in chemical reactions"
+  },
+  {
+    "word": "redox",
+    "definition": "a reversible chemical reaction in which one reaction is an oxidation and the reverse is a reduction"
+  },
+  {
+    "word": "rusting",
+    "definition": "the formation of reddish-brown ferric oxides on iron by low-temperature oxidation in the presence of water"
+  },
+  {
+    "word": "salinity",
+    "definition": "the relative proportion of salt in a solution"
+  },
+  {
+    "word": "saponification",
+    "definition": "a chemical reaction in which an ester is heated with an alkali (especially the alkaline hydrolysis of a fat or oil to make soap)"
+  },
+  {
+    "word": "solid",
+    "definition": "matter with definite shape at room temperature and pressure"
+  },
+  {
+    "word": "solubility",
+    "definition": "the quality of being easily dissolved in liquid"
+  },
+  {
+    "word": "solute",
+    "definition": "the dissolved matter in a solution"
+  },
+  {
+    "word": "solution",
+    "definition": "a homogeneous mixture of two or more substances"
+  },
+  {
+    "word": "solvent",
+    "definition": "a liquid substance capable of dissolving other substances"
+  },
+  {
+    "word": "stoichiometry",
+    "definition": "(chemistry) the relation between the quantities of substances that take part in a reaction or form a compound (typically a ratio of whole integers)"
+  },
+  {
+    "word": "STP",
+    "definition": "standard temperature and pressure"
+  },
+  {
+    "word": "sublimation",
+    "definition": "a change directly from the solid to the gaseous state"
+  },
+  {
+    "word": "subscript",
+    "definition": "character printed slightly below and to the side of another"
+  },
+  {
+    "word": "substance",
+    "definition": "a particular kind of matter with uniform properties"
+  },
+  {
+    "word": "suspension",
+    "definition": "a mixture in which fine particles are supported by buoyancy"
+  },
+  {
+    "word": "temperature",
+    "definition": "the degree of hotness or coldness of a body or environment"
+  },
+  {
+    "word": "thermochemistry",
+    "definition": "the branch of chemistry that studies the relation between chemical action and the amount of heat absorbed or generated"
+  },
+  {
+    "word": "thermodynamics",
+    "definition": "physics concerned with heat and other forms of energy"
+  },
+  {
+    "word": "titration",
+    "definition": "a measured amount of a solution of unknown concentration is added to a known volume of a second solution until the reaction between them is just complete; the concentration of the unknown solution (the titer) can then be calculated"
+  },
+  {
+    "word": "valence",
+    "definition": "the combining power of an atom or radical"
+  },
+  {
+    "word": "vaporization",
+    "definition": "the process of becoming a suspension of particles in the air"
+  },
+  {
+    "word": "viscosity",
+    "definition": "resistance of a liquid to flowing"
+  },
+  {
+    "word": "volume",
+    "definition": "the amount of 3-dimensional space occupied by an object"
+  },
+  {
+    "word": "weight",
+    "definition": "the vertical force exerted by a mass as a result of gravity"
+  },
+  {
+    "word": "yield",
+    "definition": "an amount of a product"
+  }
+]
   export {chemistry}

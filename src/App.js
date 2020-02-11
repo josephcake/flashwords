@@ -72,7 +72,7 @@ class App extends React.Component{
                    current===Zoology?zoology:
                    current===Microbiology?microbiology:
                    current===OrganicChemistry?organicChemistry:
-                   current===Biochemistry?biochemistry:null
+                   current===Biochemistry?biochemistry:null      
         return (            
             <div className="App">
                 <Navigation setCard={this.setCard}/>

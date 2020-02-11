@@ -22,6 +22,9 @@ body{
   word-wrap: break-word;  
 }
 .word-card:hover .add-to-word{  
+  visibility: visible;  
+}
+.word-card:hover .listen-left{
   visibility: visible;
 }
 .flip-card{
@@ -346,4 +349,8 @@ input.form-control{
 }
 list-group-item{
   border:none !important;
+}
+.listen-left{
+  float: left;
+  visibility: hidden;
 }
