@@ -2,19 +2,40 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route,Switch,} from 'react-router-dom';
-
+import {
+  HOME,
+  SAT,
+  GRE,
+  Biology,
+  Chemistry,
+  Physic,
+  Botany,
+  Zoology,
+  Microbiology,
+  OrganicChemistry,
+  Biochemistry
+  } from './constant/PageConstant.js'
 import Home from './page/Home.js'
 import CardContainer from './container/CardContainer.js'
 import ListContainer from './container/ListContainer.js'
 import Navigation from './navigation/Navigation.js'
 import MyWords from './page/MyWords.js'
-import {gre} from './gre.js'
-import {sat} from './sat.js'
+import {gre} from './data/gre.js'
+import {sat} from './data/sat.js'
+import {biology} from './data/biology.js'
+import {chemistry} from './data/chemistry.js'
+import {physic} from './data/physic.js'
+import {botany} from './data/botany.js'
+import {zoology} from './data/zoology.js'
+import {microbiology} from './data/microbiology.js'
+import {organicChemistry} from './data/organicChemistry.js'
+import {biochemistry} from './data/biochemistry.js'
+
 
 class App extends React.Component{
     state={
       myWords:[],
-      currentCard:"gre"
+      currentCard:null,      
     }  
     addToWords=(e)=>{
       this.setState({
@@ -29,20 +50,29 @@ class App extends React.Component{
         myWords: copy
       })
     }
-    componentDidMount(){
-      // console.log()
+    componentDidMount(){    
       window.scrollTo(0,0)
     }
     setCard=(e)=>{
-        this.setState({
-          currentCard: e
-        })
-    }
+      this.setState({
+        currentCard: e,        
+      })
+    } 
     render(){
-      const card = this.state.currentCard==="gre"?gre:this.state.currentCard==="sat"?sat:null
+      const current = this.state.currentCard
+      const card = current===GRE?gre:
+                   current===SAT?sat:
+                   current===Biology?biology:
+                   current===Chemistry?chemistry:
+                   current===Physic?physic:
+                   current===Botany?botany:
+                   current===Zoology?zoology:
+                   current===Microbiology?microbiology:
+                   current===OrganicChemistry?organicChemistry:
+                   current===Biochemistry?biochemistry:null
         return (            
             <div className="App">
-                <Navigation setCard={this.setCard}/>    
+                <Navigation setCard={this.setCard}/>
                 <Switch>                    
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/cards" render={() => <CardContainer addToWords={this.addToWords} currentCard={card}/>}/>

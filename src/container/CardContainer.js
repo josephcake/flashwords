@@ -7,15 +7,27 @@ class CardContainer extends React.Component {
             return <Card key={element.word} item={element} addToWords={this.props.addToWords}/>
         });
     }
-    render(){                        
-        return (
-            <div className="container-fluid">
 
+    render(){                                
+        return (
+            <div className="container-fluid">                                
                 <div className={"row"}>
                     {                    
+                        this.props.currentCard
+                        ?
                         this.renderCards()
+                        :
+                        <>
+                            <Card key={"GRE"} item={{"word":"GRE","definition":"GRE"}} dummy={true}/>
+                            <Card key={"GRE"} item={{"word":"GRE","definition":"GRE"}} dummy={true}/>
+                            <Card key={"GRE"} item={{"word":"GRE","definition":"GRE"}} dummy={true}/>
+                            <Card key={"GRE"} item={{"word":"GRE","definition":"GRE"}} dummy={true}/>
+                            <Card key={"GRE"} item={{"word":"GRE","definition":"GRE"}} dummy={true}/>
+                            <Card key={"GRE"} item={{"word":"GRE","definition":"GRE"}} dummy={true}/>
+                            <Card key={"GRE"} item={{"word":"GRE","definition":"GRE"}} dummy={true}/>
+                        </>
                     }
-                </div>                
+                </div>                                
             </div>
         )
     }

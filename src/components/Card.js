@@ -52,7 +52,7 @@ class Card extends React.Component{
                                 {item.definition}
                             </div>
                             :                        
-                            <div className="flip-card-front">
+                            <div className="flip-card-front word-title">
                                 {item.word}
                             </div>             
                         }                                                        

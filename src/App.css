@@ -225,6 +225,9 @@ hr.light{
     font-size: 2em;
     padding:.7rem
   }
+  tr{
+    font-size: 0.7rem;
+  }
 }
 
 #emoji{
@@ -249,11 +252,24 @@ hr.light{
 .padding-layer{
   margin: 2% 2%;
 }
+/* 
+tr{
+  font-size: 0.7rem;
+} */
+.table-list{
+  width: 80%;
+  margin:auto !important;
+}
+.list-button{
+  visibility: hidden;
+}
+.list-row:hover .list-button{
+  visibility: visible;
+}
 
-
-
-
-
+.word-title{
+  text-transform:capitalize;
+}
 
 
 

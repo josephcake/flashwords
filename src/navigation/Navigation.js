@@ -1,5 +1,17 @@
 import React, {Component} from 'react'
-import {HOME} from '../constant/PageConstant.js'
+import {
+    HOME,
+    SAT,
+    GRE,
+    Biology,
+    Chemistry,
+    Physic,
+    Botany,
+    Zoology,
+    Microbiology,
+    OrganicChemistry,
+    Biochemistry
+    } from '../constant/PageConstant.js'
 // import ToggleButton from 'react-bootstrap/ToggleButton'
 import {Link} from 'react-router-dom';
 
@@ -10,6 +22,11 @@ class Navigation extends Component {
         card:"Card",
         list:"List"
     }
+    // handleState=(word, key)={
+    //     this.setState({
+
+    //     })
+    // }
     setPage=(e)=>{
         this.setState({
             page: e,
@@ -18,26 +35,26 @@ class Navigation extends Component {
         })
     }
     setCard=(e)=>{                
-        this.props.setCard(e)        
+        this.props.setCard(e)
         this.setState({
             card: e,
             list:"List"
         })               
     }
-    setList=(e)=>{                
-        
+    setList=(e)=>{                        
+        this.props.setCard(e)
         this.setState({
             list: e,
             card:"Card"
-        })       
+        })
+               
     }
 
     render(){
         console.log(this.state)
-        return(
-            <>
+        return(            
                 <nav className={"navbar navbar-expand-md navbar-light bg-light sticky-top"}>
-                    <a href="#" className={"navbar-brand"}>FlashWords</a>
+                    <Link to="/" className={"navbar-brand"}>FlashWords</Link>
                     <button className={"navbar-toggler"} data-toggle={"collapse"} data-target={"#navbar-menu"}>
                         <span className={"navbar-toggler-icon"}></span>
                     </button>
@@ -52,11 +69,16 @@ class Navigation extends Component {
                                         {this.state.list}
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <Link to="lists" onClick={()=>this.setList("sat")} className="nav-link">SAT</Link>
-                                        <Link to="lists" onClick={()=>this.setList("gre")} className="nav-link">GRE</Link>                                        
-                                        <Link to="lists" onClick={()=>this.setList("biology")} className="nav-link">Biology</Link>
-                                        <Link to="lists" onClick={()=>this.setList("chemistry")} className="nav-link">Chemistry</Link>
-                                        <Link to="lists" onClick={()=>this.setList("physic")} className="nav-link">Physic</Link>
+                                        <Link to="lists" onClick={()=>this.setList(SAT)} className="nav-link">SAT</Link>
+                                        <Link to="lists" onClick={()=>this.setList(GRE)} className="nav-link">GRE</Link>                                        
+                                        <Link to="lists" onClick={()=>this.setList(Biology)} className="nav-link">Biology</Link>
+                                        <Link to="lists" onClick={()=>this.setList(Chemistry)} className="nav-link">Chemistry</Link>
+                                        <Link to="lists" onClick={()=>this.setList(Physic)} className="nav-link">Physic</Link>
+                                        <Link to="lists" onClick={()=>this.setList(Botany)} className="nav-link">Botany</Link>
+                                        <Link to="lists" onClick={()=>this.setList(Zoology)} className="nav-link">Zoology</Link>
+                                        <Link to="lists" onClick={()=>this.setList(Microbiology)} className="nav-link">Microbiology</Link>
+                                        <Link to="lists" onClick={()=>this.setList(OrganicChemistry)} className="nav-link">Organic Chemistry</Link>
+                                        <Link to="lists" onClick={()=>this.setList(Biochemistry)} className="nav-link">Biochemistry</Link>
                                     </div>
                                 </div>                                
                             </li>
@@ -66,11 +88,16 @@ class Navigation extends Component {
                                         {this.state.card}
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <Link to="cards" onClick={()=>this.setCard("sat")} className="nav-link">SAT</Link>
-                                        <Link to="cards" onClick={()=>this.setCard("gre")} className="nav-link">GRE</Link>                                        
-                                        <Link to="cards" onClick={()=>this.setCard("biology")} className="nav-link">Biology</Link>
-                                        <Link to="cards" onClick={()=>this.setCard("chemistry")} className="nav-link">Chemistry</Link>
-                                        <Link to="cards" onClick={()=>this.setCard("physic")} className="nav-link">Physic</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(SAT)} className="nav-link">SAT</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(GRE)} className="nav-link">GRE</Link>                                        
+                                        <Link to="cards" onClick={()=>this.setCard(Biology)} className="nav-link">Biology</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(Chemistry)} className="nav-link">Chemistry</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(Physic)} className="nav-link">Physic</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(Botany)} className="nav-link">Botany</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(Zoology)} className="nav-link">Zoology</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(Microbiology)} className="nav-link">Microbiology</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(OrganicChemistry)} className="nav-link">Organic Chemistry</Link>
+                                        <Link to="cards" onClick={()=>this.setCard(Biochemistry)} className="nav-link">Biochemistry</Link>
                                     </div>
                                 </div>                                
                             </li>
@@ -91,8 +118,7 @@ class Navigation extends Component {
                         </ul>
                     </div>
                     
-                </nav>
-            </>
+                </nav>            
         )
     }
 }

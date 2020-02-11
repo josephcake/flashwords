@@ -11,7 +11,15 @@ class MyWords extends React.Component {
         return (
             <div className="container-fluid" style={{minHeight:"max-content"}}>
                 <div className={"row"}>
-                    {this.renderCards()}
+                    {   
+                        this.props.myWords.length
+                        ?
+                        this.renderCards()
+                        :
+                        <div>
+                            please add something to your word list
+                        </div>
+                    }
                 </div>                
             </div>
         )
